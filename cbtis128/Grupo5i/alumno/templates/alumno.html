@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>papayons</title>
+    <link rel="stylesheet" href="{% static 'estilo.css' %}">
+</head>
+<body>
+    <h1> Un alumno y ses mensos (comentarios) </h1>
+    <h1>{{objeto.nombre}}</h1>
+    <ul>
+        {% for i in objeto.frase_set.all %}
+        <li> {{ i.comentario}}</li>
+        {% endfor %}
+    </ul>
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>
